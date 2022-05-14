@@ -1,0 +1,35 @@
+[{
+        "$el": "h1",
+        "children": "EEvent"
+    },
+    {
+        "$formkit": "text",
+        "name": "title",
+        "label": "Title",
+        "validation": "required"
+    },
+    {
+        "$formkit": "text",
+        "name": "description",
+        "label": "Description",
+        "validation": "required"
+    },
+    {
+        "$formkit": "text",
+        "name": "location",
+        "label": "Location",
+        "validation": "required"
+    },
+    {
+        "$formkit": "text",
+        "name": "date",
+        "label": "Date",
+        "validation": "required"
+    },
+    {
+        "$formkit": "text",
+        "name": "time",
+        "label": "Time",
+        "validation": "required"
+    }
+]
