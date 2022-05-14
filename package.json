@@ -1,0 +1,21 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview"
+  },
+  "devDependencies": {
+    "@nuxtjs/color-mode": "^3.0.3",
+    "@nuxtjs/supabase": "^0.1.11",
+    "@nuxtjs/tailwindcss": "^5.0.4",
+    "@unocss/nuxt": "^0.33.2",
+    "@vueuse/core": "^8.4.2",
+    "@vueuse/nuxt": "^8.4.2",
+    "nuxt": "3.0.0-rc.3"
+  },
+  "dependencies": {
+    "@formkit/nuxt": "^1.0.0-beta.8"
+  }
+}
