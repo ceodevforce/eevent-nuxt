@@ -22,7 +22,7 @@ const logout = async() => {
             <div class="container flex items-center justify p-6 mx-auto text-gray-600 captialize dark:text-gray-300">
                 <NuxtLink
                     class="text-gray transitions-colors duration-200 transform dark:hover:text-gray-200 border-b-2 hover:border-blue-500 mx-1.5 sm:mx-6">
-                    New Event
+                    Home
                 </NuxtLink>
                 <NuxtLink
                     class="text-gray transitions-colors duration-200 transform dark:hover:text-gray-200 border-b-2 hover:border-blue-500 mx-1.5 sm:mx-6">
