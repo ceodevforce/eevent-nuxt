@@ -1,11 +1,13 @@
 <script setup>
 import { FormKitSchema } from '@formkit/vue'
 import event from '../../formkit/event.formkit.json'
+import { useEvent } from '../../store/events';
 
 const user = useSupabaseUser();
 const client = useSupabaseClient();
+const store = useEvent();
 
-console.log("USER:", user);
+// console.log("USER:", user);
 const submitted = ref(false);
 const formData = ref({});
 const events = ref([]);
@@ -28,7 +30,7 @@ const { data, error } = await supabase
 
 */
 
-
+//TODO: Add new features to the form suchas: finished(check)
 const onSubmit = async () => {
   // TODO: submit formData to server (supabase)
   // await new Promise(resolve => setTimeout(resolve, 1000));
@@ -36,15 +38,22 @@ const onSubmit = async () => {
     {
       title: formData.value.title,
       description: formData.value.description,
-      date: formData.value.updated_at,
+      date: formData.value.date,
       time: formData.value.time,
       location: formData.value.location,
     }]);
    
   submitted.value = true;
   console.log('submitted', formData.value);
+  formData.value.title = '';
+  formData.value.description = '';
+  formData.value.date = '';
+  formData.value.time = '';
+  formData.value.location = '';
 }
 
+
+//TODO: Modify to use the Pinia state management
 const loadEvents = async () => {
   
   try {
@@ -55,11 +64,17 @@ const loadEvents = async () => {
       console.log(data);
       events.value = data;
     }
+    // events.value = store.events;
   } catch(e) {
     console.log(e);
   }
 
 }
+
+watchEffect(() => {
+  loadEvents();
+})
+
 
 onMounted(()=> {
   console.log("mounted");
@@ -84,9 +99,11 @@ onMounted(()=> {
       <h1>Place All Event Here</h1>
       <section class="bg-gray-300 dark:bg-gray-800">
         <div class="container mx-auto p-6">
+          <!-- Form Begins Here -->
             <FormKit type="form" v-model="formData" submit-label="Add an Event" @submit="onSubmit">
                 <FormKitSchema :schema="event"/>
             </FormKit>
+          <!-- Form Ends Here -->
         </div>
       </section>
       <section class="bg-gray-500 dark:bg-gray-800">

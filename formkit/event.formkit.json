@@ -22,8 +22,8 @@
     },
     {
         "$formkit": "text",
-        "name": "updated_at",
-        "label": "Updated At",
+        "name": "date",
+        "label": "Date",
         "validation": "required"
     },
     {

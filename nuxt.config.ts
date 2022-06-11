@@ -8,6 +8,7 @@ export default defineNuxtConfig({
         '@formkit/nuxt',
         '@nuxtjs/supabase',
         '@nuxtjs/tailwindcss',
+        '@pinia/nuxt'
     ],
     supabase: {
         url: process.env.SUPABASE_URL,
