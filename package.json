@@ -16,6 +16,11 @@
     "nuxt": "3.0.0-rc.3"
   },
   "dependencies": {
-    "@formkit/nuxt": "^1.0.0-beta.8"
+    "@formkit/nuxt": "^1.0.0-beta.8",
+    "@formkit/themes": "^1.0.0-beta.8",
+    "@nuxtjs/composition-api": "^0.32.0",
+    "@pinia/nuxt": "^0.1.9",
+    "pinia": "^2.0.14",
+    "vue3-google-map": "^0.13.0"
   }
 }
