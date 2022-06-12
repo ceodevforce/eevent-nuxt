@@ -5,6 +5,12 @@ export default defineEventHandler(async (event) => {
     console.log(config.cookies)
     const { url, key } = config.public.supabase
     const supabase = createClient(url, key)
+
+    const me = {
+        name: 'John Doe',
+        email: '',
+        gender: 'male'
+    }
     
     const { data, error } = await supabase.from('event').select('*')
     const { data: title, error: titleError } = await supabase.from('event').select('title')
@@ -14,5 +20,6 @@ export default defineEventHandler(async (event) => {
         data,
         title,
         date,
+        me
     }
 })

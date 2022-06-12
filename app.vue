@@ -6,8 +6,9 @@
 
 import { useEvent } from './store/events';
 
- const { data } = await useAsyncData('api', () => $fetch('/api/event'))
-  const eventData = reactive(data)
+const { data } = await useAsyncData('api', () => $fetch('/api/event'))
+ 
+const eventData = reactive(data)
 // Variables
 // const events = ref(null)
 const user = useSupabaseUser();

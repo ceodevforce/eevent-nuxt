@@ -53,7 +53,7 @@ const onSubmit = async () => {
 }
 
 
-//TODO: Modify to use the Pinia state management
+//TODO: Add new features to the form suchas: finished(check)
 const loadEvents = async () => {
   
   try {
@@ -109,7 +109,7 @@ onMounted(()=> {
       <section class="bg-gray-500 dark:bg-gray-800">
         <div class="container mx-auto p-6">
            <div class="flex items-center">
-             <div v-if="events">
+             <div v-if="events" class="flex">
              <EventCard v-for="(event, index) in events" :event="event" :key="event.id"/>
 
              </div>

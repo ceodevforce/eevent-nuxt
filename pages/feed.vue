@@ -14,9 +14,12 @@ events.value = store.getEvents
 // console.log('events', events.value.data);
 
 
-//TODO: Add features to the eevent feed to allow the user to edit and delete events 
+//TODO: Add features to the eevent feed to allow the user to edit and delete events
 // no cards are needed.
 
+// TODO: Add a map feature to the eevent feed to allow the user to view locatiion of events
+// no cards are needed.
+// TODO: Add a calendar feature to the eevent feed to allow the user to view date of events
 
 
 </script>
